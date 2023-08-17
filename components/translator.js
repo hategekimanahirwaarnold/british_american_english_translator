@@ -178,6 +178,7 @@ class Translator {
 
     //Translate from American to British English
     amBrit(text) {
+        text = text.trim();
         //beginning of analyzing words starting from bigger to smaller
         let firstSplit = splitText(text);
         function combRec(comb, currentString) {

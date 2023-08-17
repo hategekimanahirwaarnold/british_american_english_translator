@@ -99,6 +99,13 @@ input[type="button"] {
 .description {
   margin-top: 40px;
 }
+.me {
+  margin-top: 30px;
+  font-size: 1.3em;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+}
 @media (min-width: 800px) {
   .container {
     flex-direction: row;
