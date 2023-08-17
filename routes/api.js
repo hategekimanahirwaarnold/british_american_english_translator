@@ -9,7 +9,7 @@ module.exports = function(app) {
   app.route('/api/translate')
     .post((req, res) => {
       let { text, locale } = req.body;
-      console.log("text: ", text, "locale: ", locale);
+      // console.log("text: ", text, "locale: ", locale);
       let keys = Object.keys(req.body);
       let isText = keys.some(elt => elt == "text");
       let isLocal = keys.some(elt => elt == "locale");

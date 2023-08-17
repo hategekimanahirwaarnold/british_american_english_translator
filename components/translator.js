@@ -14,10 +14,10 @@ function splitText(text) {
             let secReg = /\d+:\d+/;
 
             if (!secReg.test(dat)) {
-                newRes = dat.split(/([.,;:?!])/gi);
+                newRes = dat.split(/([.,;:?\(\)"'!])/gi);
                 arr = [...arr, ...newRes];
             } else {
-                let first = dat.split(/([.,;?!])|(:$)/)
+                let first = dat.split(/([.,;"\(\)'?!])|(:$)/)
                 arr = [...arr, ...first];
                 arr = arr.filter(item => item !== undefined);
             }
@@ -42,10 +42,10 @@ function splitText1(text) {
             let secReg = /\d+.\d+/;
 
             if (!secReg.test(dat)) {
-                newRes = dat.split(/([.,;:?!])/gi);
+                newRes = dat.split(/([.,"';\(\):?!])/gi);
                 arr = [...arr, ...newRes];
             } else {
-                let first = dat.split(/([:,;?!])|(.$)/)
+                let first = dat.split(/([:,"'();?!])|(.$)/)
                 arr = [...arr, ...first];
                 arr = arr.filter(item => item !== undefined);
             }
@@ -168,7 +168,7 @@ class Translator {
         let finalResult = splittedRes.join("");
         //end of analyzing words
         let translation;
-        if (finalResult == text) {
+        if (finalResult.toLowerCase() == text.toLowerCase()) {
             translation = "Everything looks good to me!";
         } else {
             translation = finalResult;
@@ -277,7 +277,7 @@ class Translator {
         let finalResult = splittedRes.join("");
         //end of analyzing words
         let translation;
-        if (finalResult == text) {
+        if (finalResult.toLowerCase() == text.toLowerCase()) {
             translation = "Everything looks good to me!";
         } else {
             translation = finalResult;
