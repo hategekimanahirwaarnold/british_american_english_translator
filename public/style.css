@@ -2,7 +2,7 @@
 body {
   font-family: 'Quicksand', sans-serif;
   color: rgb(32, 31, 31);
-  background-color: rgb(255, 25, 178);
+  background-color: rgb(255, 78, 161);
 }
 
 code {
@@ -75,6 +75,7 @@ input[type="button"] {
   font-weight: bold;
   margin-left: 0;
   height: fit-content;
+  min-height: 200px;
 }
 
 #translated-sentence {
