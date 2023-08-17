@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap');
 body {
   font-family: 'Quicksand', sans-serif;
-  color: rgb(255, 255, 255);
+  color: rgb(32, 31, 31);
   background-color: rgb(255, 25, 178);
 }
 
@@ -9,12 +9,12 @@ code {
   background: #d0d0d5;
 }
 h1 {
-  color: rgb(0, 255, 255); 
+  color: black; 
   font-weight: bold;
   text-align: center;
 }
 h3 {
-  color: rgb(0, 255, 255);  
+  color: black;  
 }
 
 .container {
@@ -27,6 +27,8 @@ h3 {
 .form-container {
   max-width: 95%;
   margin: 15px;
+  margin-left: 0;
+  text-align: center;
 }
 
 textarea {
@@ -34,6 +36,7 @@ textarea {
   border: none;
   border-radius: 10px;
   outline: none;
+  margin-left: -2px;
 }
 
 #user-stories {
@@ -72,7 +75,7 @@ input[type="button"] {
 }
 
 #solution-container {
-  margin-left: 20px;
+  margin-left: 0px;
 }
 
 #translated-sentence {
@@ -82,11 +85,12 @@ input[type="button"] {
 
 #error-msg {
   font-weight: normal;
-  color: rgb(24, 16, 9);
+  color: rgb(0, 0, 0);
 }
 
 .highlight {
-  color: rgb(0, 255, 255);
+  font-size: 1.2ems;
+  color: rgb(0, 230, 77);
 }
 
 #text-input {
@@ -107,6 +111,9 @@ input[type="button"] {
   color: black;
 }
 @media (min-width: 800px) {
+  textarea {
+    margin: 15px;
+  }
   .container {
     flex-direction: row;
   }
@@ -125,5 +132,6 @@ input[type="button"] {
   #solution-container {
     width: 75%;
     margin-top: 0;
+    margin-left: 20px;
   }
 }
